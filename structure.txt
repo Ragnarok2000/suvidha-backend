@@ -1,0 +1,135 @@
+Folder PATH listing for volume OS
+Volume serial number is 2653-0EF4
+C:.
+¦   .classpath
+¦   .gitattributes
+¦   .gitignore
+¦   .project
+¦   HELP.md
+¦   mvnw
+¦   mvnw.cmd
+¦   pom.xml
+¦   structure.txt
+¦   
++---.mvn
+¦   +---wrapper
+¦           maven-wrapper.properties
+¦           
++---.settings
+¦       org.eclipse.core.resources.prefs
+¦       org.eclipse.jdt.core.prefs
+¦       org.eclipse.m2e.core.prefs
+¦       
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦   ¦   +---com
+¦   ¦   ¦       +---suvidha
+¦   ¦   ¦           ¦   SuvidhaApplication.java
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---Configuration
+¦   ¦   ¦           ¦       CustomUserDetailService.java
+¦   ¦   ¦           ¦       SecurityConfig.java
+¦   ¦   ¦           ¦       WebConfig.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---Controller
+¦   ¦   ¦           ¦       ArticleController.java
+¦   ¦   ¦           ¦       AuthController.java
+¦   ¦   ¦           ¦       SummaryController.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---Exception
+¦   ¦   ¦           ¦       SummaryNotFoundException.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---Modal
+¦   ¦   ¦           ¦       Article.java
+¦   ¦   ¦           ¦       Summary.java
+¦   ¦   ¦           ¦       User.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---Repsoitory
+¦   ¦   ¦           ¦       ArticleRepository.java
+¦   ¦   ¦           ¦       SummaryRepository.java
+¦   ¦   ¦           ¦       UserRepository.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---Service
+¦   ¦   ¦           ¦       ArticleService.java
+¦   ¦   ¦           ¦       IArticleService.java
+¦   ¦   ¦           ¦       IsummaryService.java
+¦   ¦   ¦           ¦       IuserService.java
+¦   ¦   ¦           ¦       PerplexityService.java
+¦   ¦   ¦           ¦       SummaryService.java
+¦   ¦   ¦           ¦       UserService.java
+¦   ¦   ¦           ¦       
+¦   ¦   ¦           +---Utility
+¦   ¦   ¦                   JwtAuthenticationFilter.java
+¦   ¦   ¦                   JwtUtility.java
+¦   ¦   ¦                   
+¦   ¦   +---resources
+¦   ¦       ¦   application.yml
+¦   ¦       ¦   
+¦   ¦       +---static
+¦   ¦       +---templates
+¦   +---test
+¦       +---java
+¦           +---com
+¦               +---suvidha
+¦                       SuvidhaApplicationTests.java
+¦                       
++---target
+    +---classes
+    ¦   ¦   application.yml
+    ¦   ¦   
+    ¦   +---com
+    ¦   ¦   +---suvidha
+    ¦   ¦       ¦   SuvidhaApplication.class
+    ¦   ¦       ¦   
+    ¦   ¦       +---Configuration
+    ¦   ¦       ¦       CustomUserDetailService.class
+    ¦   ¦       ¦       SecurityConfig.class
+    ¦   ¦       ¦       WebConfig$1.class
+    ¦   ¦       ¦       WebConfig.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---Controller
+    ¦   ¦       ¦       ArticleController.class
+    ¦   ¦       ¦       AuthController.class
+    ¦   ¦       ¦       SummaryController.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---Exception
+    ¦   ¦       ¦       SummaryNotFoundException.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---Modal
+    ¦   ¦       ¦       Article.class
+    ¦   ¦       ¦       Summary.class
+    ¦   ¦       ¦       User.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---Repsoitory
+    ¦   ¦       ¦       ArticleRepository.class
+    ¦   ¦       ¦       SummaryRepository.class
+    ¦   ¦       ¦       UserRepository.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---Service
+    ¦   ¦       ¦       ArticleService.class
+    ¦   ¦       ¦       IArticleService.class
+    ¦   ¦       ¦       IsummaryService.class
+    ¦   ¦       ¦       IuserService.class
+    ¦   ¦       ¦       PerplexityService.class
+    ¦   ¦       ¦       SummaryService.class
+    ¦   ¦       ¦       UserService.class
+    ¦   ¦       ¦       
+    ¦   ¦       +---Utility
+    ¦   ¦               JwtAuthenticationFilter.class
+    ¦   ¦               JwtUtility.class
+    ¦   ¦               
+    ¦   +---META-INF
+    ¦       ¦   MANIFEST.MF
+    ¦       ¦   
+    ¦       +---maven
+    ¦           +---com.suvidha
+    ¦               +---suvidha
+    ¦                       pom.properties
+    ¦                       pom.xml
+    ¦                       
+    +---test-classes
+        +---com
+            +---suvidha
+                    SuvidhaApplicationTests.class
+                    
