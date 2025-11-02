@@ -1,6 +1,8 @@
 package com.suvidha.Modal;
 
 import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -34,13 +36,14 @@ public class Article {
     @Column(columnDefinition = "TEXT")
     private String summary;
     
-    // NEW FIELDS
     private String summaryLength; // "short", "medium", "long"
     
     private LocalDateTime createdAt;
     
     @PrePersist
     protected void onCreate() {
-        createdAt = LocalDateTime.now();
+        // Get current time in IST (India Standard Time)
+        ZonedDateTime istTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+        createdAt = istTime.toLocalDateTime();
     }
 }
