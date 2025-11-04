@@ -26,7 +26,7 @@ public class SummaryService implements IsummaryService {
     }
 
     @Override
-    @Async // ✅ Runs in background thread
+    @Async
     @CacheEvict(value = "summariesByUser", key = "#summary.user.username")
     public Summary save(Summary summary) {
         System.out.println("🔄 Cache evicted for user: " + summary.getUser().getUsername());
@@ -36,19 +36,21 @@ public class SummaryService implements IsummaryService {
     @Override
     @Cacheable(value = "summariesByUser", key = "#username", unless = "#result == null or #result.isEmpty()")
     public List<Summary> getSummariesByUsername(String username) throws SummaryNotFoundException {
-        System.out.println("🔴 Redis Cache MISS - Fetching summaries from database for user: " + username);
+        // ⚠️ This log ONLY appears on CACHE MISS (when method actually executes)
+        System.out.println("🔴 CACHE MISS - Fetching summaries from database for user: " + username);
 
         List<Summary> summaries = summaryRepository.findByUserUsername(username);
         if (summaries != null && !summaries.isEmpty()) {
             System.out.println("✅ Found " + summaries.size() + " summaries in database for user: " + username);
             return summaries;
         } else {
+            System.out.println("⚠️ No summaries found in database for user: " + username);
             throw new SummaryNotFoundException("No summaries found for user: " + username);
         }
     }
 
     @Override
-    @Async // ✅ Optional: make deletion async too
+    @Async
     @CacheEvict(value = "summariesByUser", key = "#username")
     public boolean deleteById(Long id, String username) {
         System.out.println("🗑️ Deleting summary with ID: " + id + " for user: " + username);
