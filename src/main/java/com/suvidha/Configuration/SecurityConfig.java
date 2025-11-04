@@ -34,6 +34,7 @@ public class SecurityConfig {
         http.csrf().disable()
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll() //  Allow CORS preflight
+                .requestMatchers("/actuator/**").permitAll() //  FOR PROMETHEUS
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/summaries/clearCache").permitAll()
                 .requestMatchers("/summaries/**").authenticated()
